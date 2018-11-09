@@ -1,0 +1,29 @@
+import numpy as np
+
+
+def main():
+    numbers_cl1 = np.random.uniform(-0.5, 0.5, 100)
+    numbers_cl2 = np.random.uniform(0, 20, 100)
+    numbers_cl3 = np.random.uniform(21, 29, 100)
+
+    f = open("test_data.txt", "w+")
+
+    i = 0
+    while i <= len(numbers_cl1) - 2:
+        f.write("{} {}\n".format(numbers_cl1[i], numbers_cl1[i + 1]))
+        i += 2
+
+    i = 0
+    while i <= len(numbers_cl2) - 2:
+        f.write("{} {}\n".format(numbers_cl2[i], numbers_cl2[i + 1]))
+        i += 2
+
+    i = 0
+    while i <= len(numbers_cl3) - 2:
+        f.write("{} {}\n".format(numbers_cl3[i], numbers_cl3[i + 1]))
+        i += 2
+
+    f.close()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,17 @@
+import numpy as np
+
+
+def main():
+    numbers_cl = np.random.randint(-100, 100, 400)
+
+    f = open("test_data_starsky.txt", "w+")
+
+    i = 0
+    while i <= len(numbers_cl) - 2:
+        f.write("{} {}\n".format(numbers_cl[i], numbers_cl[i + 1]))
+        i += 2
+
+    f.close()
+
+if __name__ == "__main__":
+    main()
