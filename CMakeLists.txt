@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 
-project(kkmeans)
+project(kkmeans VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 set(CMAKE_BUILD_TYPE DEBUG)
 
