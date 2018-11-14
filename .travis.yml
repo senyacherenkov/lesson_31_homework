@@ -1,6 +1,15 @@
 language: cpp
 before_script:
-- sudo apt-get install libdlib-dev -y
+- wget http://dlib.net/files/dlib-19.16.tar.bz2
+- tar xf dlib-19.16.tar.bz2
+- cd dlib-19.16
+- mkdir build
+- cd build
+- cmake ..
+- cmake --build . --config Release
+- sudo make install
+- sudo ldconfig
+- cd "${TRAVIS_BUILD_DIR}"
 - sudo apt-get install libopenblas-dev -y
 script:
 - cmake .
